@@ -14,11 +14,9 @@ jobs:
       osx_64_python3.7:
         CONFIG: osx_64_python3.7
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: nsls2/nsls2forge:latest
-      osx_python3.8:
-        CONFIG: osx_python3.8
+      osx_64_python3.8:
+        CONFIG: osx_64_python3.8
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: nsls2/nsls2forge:latest
     maxParallel: 8
   timeoutInMinutes: 360
 
