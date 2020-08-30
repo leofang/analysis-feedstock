@@ -9,7 +9,7 @@ package:
   version: {{ year }}C{{ cycle }}.{{ version }}{{ micro }}
 
 build:
-  skip: True  # [py<36]
+  skip: True  # [py<37]
   number: 9
 
 requirements:
@@ -137,7 +137,7 @@ test:
     - xray_vision
   commands:
     # Fail if the "conda-forge" channel is in the list of channels.
-    - check-results -t channels -f conda-forge  # [not osx]
+    - check-results -t channels -f conda-forge
     # Fail if versions of the packages are not as expected minimum ones.
     - check-results -t version -p bluesky    -e 1.6
     - check-results -t version -p databroker -e 1.0
@@ -150,7 +150,7 @@ test:
 
 about:
   home: https://nsls-ii.github.io/deployment_docs.html
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Analysis metapackage for NSLS-II deployments
   description: |
